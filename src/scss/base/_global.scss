@@ -1,31 +1,32 @@
 body {
-  font-family: 'Times New Roman';
   color: black;
+  font-family: Arial, sans-serif;
 }
 
 .container {
-  max-width: 1144px;
-  margin: 0 auto;
   position: relative;
   z-index: 1;
+  max-width: 1144px;
+  margin: 0 auto;
 
   @media (max-width: 1200px) {
-    padding-left: 30px;
     padding-right: 30px;
+    padding-left: 30px;
   }
+
   @media (max-width: 575px) {
-    padding-left: 15px;
     padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
-  overflow: hidden;
   border: 0;
+  margin: -1px;
   clip: rect(0 0 0 0);
 }

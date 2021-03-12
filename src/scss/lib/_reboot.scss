@@ -1,3 +1,4 @@
+/* stylelint-disable */
 *,
 ::after,
 ::before {
@@ -7,8 +8,8 @@
 html {
   font-family: sans-serif;
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
 }
 
 article,
@@ -26,15 +27,25 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  background-color: #fff;
+  color: #212529;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
   text-align: left;
-  background-color: #fff;
 }
 
 [tabindex='-1']:focus:not(:focus-visible) {
@@ -42,9 +53,9 @@ body {
 }
 
 hr {
-  box-sizing: content-box;
-  height: 0;
   overflow: visible;
+  height: 0;
+  box-sizing: content-box;
 }
 
 h1,
@@ -64,11 +75,11 @@ p {
 
 abbr[data-original-title],
 abbr[title] {
-  text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-  cursor: help;
   border-bottom: 0;
+  cursor: help;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline;
+  text-decoration: underline dotted;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
@@ -135,19 +146,24 @@ sup {
 }
 
 a {
+  background-color: transparent;
   color: #007bff;
   text-decoration: none;
-  background-color: transparent;
 }
-a:hover {
+
+a:hover,
+a:focus {
   color: #0056b3;
   text-decoration: underline;
 }
+
 a:not([href]) {
   color: inherit;
   text-decoration: none;
 }
-a:not([href]):hover {
+
+a:not([href]):hover,
+a:not([href]):focus {
   color: inherit;
   text-decoration: none;
 }
@@ -156,15 +172,21 @@ code,
 kbd,
 pre,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
+  font-family:
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace;
   font-size: 1em;
 }
 
 pre {
+  overflow: auto;
   margin-top: 0;
   margin-bottom: 1rem;
-  overflow: auto;
 }
 
 figure {
@@ -172,8 +194,8 @@ figure {
 }
 
 img {
-  vertical-align: middle;
   border-style: none;
+  vertical-align: middle;
 }
 
 svg {
@@ -188,9 +210,9 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  caption-side: bottom;
   color: #6c757d;
   text-align: left;
-  caption-side: bottom;
 }
 
 th {
@@ -203,12 +225,13 @@ label {
 }
 
 button {
-  border-radius: 0;
   margin: 0;
+  border-radius: 0;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
+
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -265,6 +288,7 @@ input[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
+
 input[type='date'],
 input[type='datetime-local'],
 input[type='month'],
@@ -280,8 +304,8 @@ textarea {
 fieldset {
   min-width: 0;
   padding: 0;
-  margin: 0;
   border: 0;
+  margin: 0;
 }
 
 legend {
@@ -290,9 +314,9 @@ legend {
   max-width: 100%;
   padding: 0;
   margin-bottom: 0.5rem;
+  color: inherit;
   font-size: 1.5rem;
   line-height: inherit;
-  color: inherit;
   white-space: normal;
 }
 
@@ -306,16 +330,17 @@ progress {
 }
 
 [type='search'] {
-  outline-offset: -2px;
   -webkit-appearance: none;
+  outline-offset: -2px;
 }
+
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
-  font: inherit;
   -webkit-appearance: button;
+  font: inherit;
 }
 
 output {

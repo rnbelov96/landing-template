@@ -1,17 +1,18 @@
 .priv-policy {
   position: relative;
   max-width: 650px;
-  background-color: white;
   padding: 24px 44px;
+  background-color: white;
   font-size: 16px;
+
   &_modal {
     margin: 40px auto;
   }
 }
 
 .priv-policy__title {
-  text-align: center;
   padding-bottom: 25px;
+  text-align: center;
 }
 
 .priv-policy__subtitle,
@@ -20,8 +21,8 @@
 }
 
 .priv-policy__list {
-  list-style: none;
   padding-left: 25px;
+  list-style: none;
 }
 
 .priv-policy__item {
