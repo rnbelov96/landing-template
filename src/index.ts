@@ -1,4 +1,6 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
 import './scss/style.scss';
-import './ts/modals';
+// import './ts/modals';
+// import './ts/calc';
+// import './ts/setup-forms';
+// import './ts/f5leads-init';
+// import './ts/f5leads';

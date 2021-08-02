@@ -1,4 +1,5 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
 import '../scss/thanks.scss';
-import './modals';
+// import './modals';
+
+const nameLabelEl = document.querySelector('.js-name') as HTMLSpanElement;
+nameLabelEl.textContent = localStorage.getItem('userName') || 'Гость';

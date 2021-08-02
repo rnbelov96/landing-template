@@ -28,7 +28,7 @@ module.exports = merge(common, {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jpg|gif|webp|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|webp|svg)$/,
         use: [
           'file-loader',
         ],

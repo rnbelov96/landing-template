@@ -3,24 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Спасибо! Ваша заявка принята</title>
+    <title>Франшиза «»</title>
   </head>
   <body class="thanks__body">
-    <header>
-      <!-- Верстка header -->
-    </header>
-    <section class="thanks">
-      <div class="thanks__header">
-        <div class="container">
-          <header></header>
-        </div>
+    <section class="thanks__header">
+      <div class="container">
+        <header class="header header_thanks">
+        </header>
       </div>
+    </section>
+    <section class="thanks">
       <div class="thanks__content">
         <div class="container">
           <div class="thanks__content-wrapper">
             <div class="thanks__content-box">
               <h1 class="thanks__title">
-                <span class="thanks__user-name"></span>НАШИ МЕНЕДЖЕРЫ УЖЕ
+                <span class="thanks__user-name js-name"></span>НАШИ МЕНЕДЖЕРЫ УЖЕ
                 ЗАНИМАЮТСЯ ВАШЕЙ ЗАЯВКОЙ
               </h1>
               <h2 class="thanks__subtitle">
@@ -28,17 +26,24 @@
               </h2>
               <div class="thanks__btn-box">
                 <a class="thanks__link" href="doc/mk.pdf">
-                  <button class="thanks__button">Скачать презентацию</button>
+                  <div class="button__wrapper button__wrapper">
+                    <button type="button" class="button button_without-logo">
+                      Скачать презентацию
+                    </button>
+                    <div class="button__bg button__bg_thanks"></div>
+                  </div>
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer>
-        <!-- Верстка footer -->
+      <footer class="footer footer_thanks">
       </footer>
     </section>
+
+    <div class="modal">
+    </div>
 
     <div class="modal">
       <div class="priv-policy priv-policy_modal">
@@ -61,8 +66,8 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Баланс
-            Эксперт».
+            Оператор может получить о посетителях веб-сайта компании «Samokat
+            Day».
           </li>
         </ol>
 
@@ -188,8 +193,9 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом rostufa@mail.ru с пометкой «Отказ от
-            уведомлений о новых продуктах и услугах и специальных предложениях».
+            электронной почты с доменом Vladimir2395@mail.ru с пометкой «Отказ
+            от уведомлений о новых продуктах и услугах и специальных
+            предложениях».
           </li>
           <li class="priv-policy__item">
             3. Обезличенные данные Пользователей, собираемые с помощью сервисов

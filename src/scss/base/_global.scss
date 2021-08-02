@@ -1,22 +1,26 @@
 body {
+  background-color: white;
   color: black;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  line-height: normal;
+}
+
+main {
+  overflow: hidden;
 }
 
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1144px;
+  max-width: 1440px;
   margin: 0 auto;
 
-  @media (max-width: 1200px) {
-    padding-right: 30px;
-    padding-left: 30px;
+  @media (max-width: 1450px) {
+    padding: 0 30px;
   }
 
   @media (max-width: 575px) {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 0 15px;
   }
 }
 

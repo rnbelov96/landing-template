@@ -13,9 +13,7 @@
   flex-direction: column;
 
   &__body {
-    @include bg;
-    // background-image: url('/src/img/bgs/desc-bg.jpg');
-    background-attachment: fixed;
+    background-color: black;
   }
 
   &__body,
@@ -24,12 +22,14 @@
   }
 
   &__header {
+    overflow: hidden;
     flex: 0 0 auto;
     padding-top: 20px;
+    padding-bottom: 30px;
   }
 
   .container {
-    max-width: 1144px;
+    max-width: 1140px;
   }
 
   footer {
@@ -56,7 +56,7 @@
   }
 
   &__title {
-    color: $white;
+    color: white;
     font-size: 30px;
     font-weight: 500;
     text-align: center;
@@ -69,7 +69,7 @@
   &__subtitle {
     margin-top: 40px;
     margin-bottom: 20px;
-    color: $white;
+    color: white;
     font-size: 18px;
     text-align: center;
   }
@@ -84,33 +84,6 @@
   &__btn-box {
     display: flex;
     justify-content: center;
-  }
-
-  &__button {
-    width: 300px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    border: none;
-    background-image: linear-gradient(to top, #e8232b, #f87ca5);
-    border-radius: 5px;
-    box-shadow: 0 3px 0 0 #cc1c3d;
-    color: $white;
-    font-size: 18px;
-    font-weight: 900;
-    line-height: 1.44;
-    text-align: center;
-
-    &:hover,
-    &:focus {
-      background-image: linear-gradient(to top, #f04a5a, #f9b);
-      box-shadow: 0 3px 0 0 #de3958;
-      outline: none;
-    }
-
-    &:active {
-      background-image: linear-gradient(to top, #bd0007, #ed3d4e);
-      box-shadow: inset 0 4px 1px 0 rgba(0, 0, 0, 0.23);
-    }
   }
 }
 
