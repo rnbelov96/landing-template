@@ -1,6 +1,8 @@
 /* eslint-disable no-param-reassign */
 export {};
 
+const openedModalList: Element[] = [];
+
 const modalFormInfoList = [
   {
     title: 'на бесплатную консультацию',
@@ -29,8 +31,8 @@ const openModal = (modalEl: HTMLDivElement) => {
 const modalElList = document.querySelectorAll('.modal');
 const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
 
-const formTitleEl = formModalEl.querySelector('span') as HTMLSpanElement;
-const formBtnEl = formModalEl.querySelector('button') as HTMLButtonElement;
+const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
+const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
@@ -52,9 +54,8 @@ modalElList.forEach(modalEl => {
 const closeModalElList = document.querySelectorAll('.modal__close');
 closeModalElList.forEach(closeEl => {
   closeEl.addEventListener('click', () => {
-    modalElList.forEach(modalEL => {
-      closeModal(modalEL as HTMLDivElement);
-    });
+    closeModal(openedModalList[0] as HTMLDivElement);
+    openedModalList.shift();
   });
 });
 
@@ -62,6 +63,7 @@ closeModalElList.forEach(closeEl => {
 const policyBtnElList = document.querySelectorAll('.js-policy');
 policyBtnElList.forEach(el => {
   el.addEventListener('click', () => {
+    openedModalList.unshift(policyModalEl);
     openModal(policyModalEl as HTMLDivElement);
   });
 });
@@ -69,6 +71,7 @@ policyBtnElList.forEach(el => {
 const callbackBtnElList = document.querySelectorAll('.js-callback');
 callbackBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
+    openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[0].title;
     formBtnEl.textContent = modalFormInfoList[0].button;
     openModal(formModalEl as HTMLDivElement);
@@ -78,13 +81,15 @@ callbackBtnElList.forEach(btn => {
 const presentBtnElList = document.querySelectorAll('.js-present');
 presentBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
+    openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[1].title;
     formBtnEl.textContent = modalFormInfoList[1].button;
     openModal(formModalEl as HTMLDivElement);
   });
 });
 
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv') as HTMLButtonElement;
-youtubeAdvBtnCallEl.addEventListener('click', () => {
+const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
+youtubeAdvBtnCallEl?.addEventListener('click', () => {
+  openedModalList.unshift(youtubeAdvModalEl);
   openModal(youtubeAdvModalEl as HTMLDivElement);
 });
