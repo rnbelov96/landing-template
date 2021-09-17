@@ -362,10 +362,15 @@ const initSlider = (options: {
     if (currentImage === 0) {
       currentImage = options.imagesLength;
     }
-    navItemList[currentImage - 1].classList.add('slider__nav-item_active');
-    navItemList[prevCurrentImage - 1].classList.remove(
-      'slider__nav-item_active',
-    );
+    
+    if (options.withNav) {
+      navItemList[currentImage - 1].classList.add(
+        `${options.sliderSectionName}__nav-item_active`,
+      );
+      navItemList[prevCurrentImage - 1].classList.remove(
+        `${options.sliderSectionName}__nav-item_active`,
+      );
+    }
 
     sliderImagesBoxEl.style.transform = `translate3d(${translateXPos}%, 0px, 0px)`;
 
@@ -388,10 +393,14 @@ const initSlider = (options: {
       currentImage = 1;
     }
 
-    navItemList[currentImage - 1].classList.add('slider__nav-item_active');
-    navItemList[prevCurrentImage - 1].classList.remove(
-      'slider__nav-item_active',
-    );
+    if (options.withNav) {
+      navItemList[currentImage - 1].classList.add(
+        `${options.sliderSectionName}__nav-item_active`,
+      );
+      navItemList[prevCurrentImage - 1].classList.remove(
+        `${options.sliderSectionName}__nav-item_active`,
+      );
+    }
 
     sliderImagesBoxEl.style.transform = `translate3d(${translateXPos}%, 0px, 0px)`;
 
