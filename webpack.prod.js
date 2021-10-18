@@ -50,7 +50,7 @@ module.exports = merge(common, {
       dest: 'index.html',
       inline: true,
       minify: true,
-      extract: true,
+      extract: false,
       width: 375,
       height: 565,
       penthouse: {
