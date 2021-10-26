@@ -19,8 +19,9 @@ main {
     padding: 0 30px;
   }
 
-  @media (max-width: 575px) {
-    padding: 0 15px;
+  @media (max-width: 650px) {
+    padding: 0;
+    width: 300px;
   }
 }
 
