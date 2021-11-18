@@ -21,6 +21,14 @@ module.exports = merge(common, {
             },
           },
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['postcss-gap'],
+              },
+            },
+          },
           'sass-loader',
         ],
       },
