@@ -42,7 +42,19 @@ module.exports = merge(common, {
               name: 'images/[hash].[ext]',
             },
           },
-          'image-webpack-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 90
+              },
+              pngquant: {
+                quality: [0.9, 0.9],
+                speed: 4,
+              },
+            },
+          },
         ],
       },
     ],
