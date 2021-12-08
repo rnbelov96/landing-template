@@ -33,7 +33,13 @@ const openModal = (modalEl: HTMLDivElement) => {
 };
 
 const modalElList = document.querySelectorAll('.modal');
-const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
+const [formModalEl, policyModalEl, youtubeModalEl] = modalElList;
+
+// Для каждого модального видео создать 2 таких переменных
+const youtubeModalWrapperEl = youtubeModalEl?.querySelector(
+  '.modal__center-wrapper',
+) as HTMLDivElement;
+let isYoutubeModalOpened = false;
 
 const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
 const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
@@ -43,7 +49,8 @@ modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
       const clickedModal = e.currentTarget as HTMLDivElement;
-      if (clickedModal === youtubeAdvModalEl) {
+      // Если модальных видео несколько, проверить каждое
+      if (clickedModal === youtubeModalEl) {
         const iframe = clickedModal.querySelector('iframe');
         if (iframe) {
           const iframeSrc = iframe.src;
@@ -92,8 +99,24 @@ presentBtnElList.forEach(btn => {
   });
 });
 
-const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
-youtubeAdvBtnCallEl?.addEventListener('click', () => {
-  openedModalList.unshift(youtubeAdvModalEl);
-  openModal(youtubeAdvModalEl as HTMLDivElement);
+// Для каждого модального окна с видео прописать такой обработчик 
+const youtubeBtnCallEl = document.querySelector('.js-youtube');
+youtubeBtnCallEl?.addEventListener('click', () => {
+  if (!isYoutubeModalOpened) {
+    isYoutubeModalOpened = true;
+    youtubeModalWrapperEl.innerHTML = `
+      <iframe
+        class="modal__video"
+        width="1520"
+        height="855"
+        src="https://www.youtube.com/embed/2OEL4P1Rz04"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
+  openedModalList.unshift(youtubeModalEl);
+  openModal(youtubeModalEl as HTMLDivElement);
 });
