@@ -45,3 +45,15 @@
     margin-bottom: 30px;
   }
 }
+
+@mixin mobile-mb {
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+@mixin tablet-mb {
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+}
