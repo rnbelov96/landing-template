@@ -9,6 +9,10 @@
   &_modal {
     margin: 40px auto;
   }
+
+  @media (max-width: 650px) {
+    padding: 12px 20px;
+  }
 }
 
 .priv-policy__title {
