@@ -1,4 +1,5 @@
 import '../scss/thanks.scss';
+import './year';
 // import './modals';
 
 const userName = localStorage.getItem('userName');

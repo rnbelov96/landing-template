@@ -1,4 +1,5 @@
 import './scss/style.scss';
+import './ts/year';
 // import './ts/modals';
 // import './ts/slider';
 // import './ts/calc';
