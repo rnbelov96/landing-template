@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Франшиза «»</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"
+      integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -18,28 +28,28 @@
   </head>
   <body>
     <main>
-      <section class="slider">
-        <div class="slider__wrapper">
-          <div class="slider__img-box">
-            <div class="slider__img-item"></div>
-            <div class="slider__img-item"></div>
-            <div class="slider__img-item"></div>
-            <div class="slider__img-item"></div>
+      <div class="slidersection__slider-wrapper">
+        <div class="swiper slidersection__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slidersection__slide">Slide 1</div>
+            <div class="swiper-slide slidersection__slide">Slide 2</div>
+            <div class="swiper-slide slidersection__slide">Slide 3</div>
           </div>
         </div>
-        <div class="slider__btns-box">
-          <button class="slider__btn-prev"></button
-          ><button class="slider__btn-next"></button>
-        </div>
-        <div class="slider__nav-box"></div>
-      </section>
+        <div
+          class="swiper-button-next slidersection__slider-btn slidersection__slider-btn_next"
+        ></div>
+        <div
+          class="swiper-button-prev slidersection__slider-btn slidersection__slider-btn_prev"
+        ></div>
+        <div class="swiper-pagination slidersection__slider-pagination"></div>
+      </div>
     </main>
 
     <div class="modal">
       <div class="modal__center-wrapper animate__animated">
         <form class="modal-form">
-          <h3 class="modal-form__title js-modal-form-title">
-          </h3>
+          <h3 class="modal-form__title js-modal-form-title"></h3>
           <button class="button button_modal-form js-modal-form-btn">
             Получить документацию
           </button>
@@ -73,7 +83,8 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Название Компании».
+            Оператор может получить о посетителях веб-сайта компании «Название
+            Компании».
           </li>
         </ol>
 
@@ -199,9 +210,8 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом email@mail.ru с пометкой «Отказ
-            от уведомлений о новых продуктах и услугах и специальных
-            предложениях».
+            электронной почты с доменом email@mail.ru с пометкой «Отказ от
+            уведомлений о новых продуктах и услугах и специальных предложениях».
           </li>
           <li class="priv-policy__item">
             3. Обезличенные данные Пользователей, собираемые с помощью сервисов
