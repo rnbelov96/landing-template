@@ -6,12 +6,12 @@ const formsList = document.querySelectorAll('form');
 
 formsList.forEach(form => {
   const nameInputEl = form.querySelector('[data-type="name"]') as HTMLInputElement | null;
-  const phoneInputEl = form.querySelector('[data-type="phone"]') as HTMLInputElement;
-  const emailInputEl = form.querySelector('[data-type="email"]') as HTMLInputElement;
+  const phoneInputEl = form.querySelector('[data-type="phone"]') as HTMLInputElement | null;
+  const emailInputEl = form.querySelector('[data-type="email"]') as HTMLInputElement | null;
   const cityInputEl = form.querySelector('[data-type="city"]') as HTMLInputElement | null;
 
   let phoneMask: any;
-  phoneInputEl.addEventListener('focus', () => {
+  phoneInputEl?.addEventListener('focus', () => {
     if (!phoneMask || phoneMask.unmaskedValue === '') {
       phoneMask = IMask(phoneInputEl, {
         mask: '+7 (000) 000 0000',
@@ -24,7 +24,7 @@ formsList.forEach(form => {
     phoneInputEl.selectionStart = stringEnd;
     phoneInputEl.selectionEnd = stringEnd;
   });
-  phoneInputEl.addEventListener('blur', e => {
+  phoneInputEl?.addEventListener('blur', e => {
     const inputEl = e.currentTarget as HTMLInputElement;
     if (phoneMask.unmaskedValue === '') {
       phoneMask.destroy();
@@ -38,7 +38,7 @@ formsList.forEach(form => {
   });
 
   nameInputEl?.addEventListener('focus', onFocus);
-  phoneInputEl.addEventListener('focus', onFocus);
-  emailInputEl.addEventListener('focus', onFocus);
+  phoneInputEl?.addEventListener('focus', onFocus);
+  emailInputEl?.addEventListener('focus', onFocus);
   cityInputEl?.addEventListener('focus', onFocus);
 });
