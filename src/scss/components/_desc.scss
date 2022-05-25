@@ -1,0 +1,30 @@
+.desc__slider-box {
+  margin-bottom: 30px;
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.desc__slider-pagination {
+  position: relative;
+  bottom: 0 !important;
+  margin-top: 5px;
+}
+
+.desc__slider-wrapper {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 30px;
+
+  @media (max-width: 650px) {
+    gap: 0px;
+    flex-wrap: initial;
+    justify-content: initial;
+  }
+}
+
+.desc__slide {
+  max-width: 300px;
+  width: 100% !important;
+}

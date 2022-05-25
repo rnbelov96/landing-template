@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Франшиза «»</title>
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
@@ -13,7 +13,7 @@
       integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script> -->
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -27,8 +27,23 @@
     <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.map&lang=ru-RU"></script>
   </head>
   <body>
+    <section class="desc">
+      <div class="container">
+        <div class="desc__slider-box">
+          <div class="swiper desc__slider">
+            <div class="swiper-wrapper desc__slider-wrapper">
+              <div class="swiper-slide desc__slide"></div>
+              <div class="swiper-slide desc__slide"></div>
+              <div class="swiper-slide desc__slide"></div>
+            </div>
+          </div>
+          <div class="swiper-pagination desc__slider-pagination"></div>
+        </div>
+      </div>
+    </section>
+
     <main>
-      <div class="slidersection__slider-wrapper">
+      <!-- <div class="slidersection__slider-wrapper">
         <div class="swiper slidersection__slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide slidersection__slide">Slide 1</div>
@@ -43,7 +58,7 @@
           class="swiper-button-prev slidersection__slider-btn slidersection__slider-btn_prev"
         ></div>
         <div class="swiper-pagination slidersection__slider-pagination"></div>
-      </div>
+      </div> -->
     </main>
 
     <div class="modal">
